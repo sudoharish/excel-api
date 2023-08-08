@@ -12,13 +12,23 @@ spec:
       labels:
         app: excelapi
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                - worker-node01
+                # - antarctica-west1
       containers:
       - name: excelapi
         image: sudoharish/excelapi:latest
         resources:
           limits:
             memory: "128Mi"
-            cpu: "500m"
+            # cpu: "500m"
         ports:
         - containerPort: 5000
 ---
