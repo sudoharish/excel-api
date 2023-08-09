@@ -5,4 +5,9 @@ http://127.0.0.1:5000/api/data?Segment=Government
 
 http://127.0.0.1:30000/api/data?Segment=Government
 
+http://127.0.0.1:30000/api/data?Segment=Government&Country=Canada&Product=Velo
+kubectl excelapi-7c6c74488b-hmbgj
+ 
 
+ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/workloads?namespace=dev
+http://localhost:30001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/workloads?namespace=dev
